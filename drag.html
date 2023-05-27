@@ -13,6 +13,10 @@
         box-sizing: border-box;
         color: #b0afaf;
     }
+    body{
+        position: relative;
+        overflow: hidden;
+    }
 
     .grid {
         touch-action: none;
@@ -71,7 +75,7 @@
     }
 
     .clone-grid-item {
-        position: fixed;
+        position: absolute;
         left: 0;
         top: 0;
         z-index: 1;
@@ -229,7 +233,7 @@
         this.clone.x += this.diff.x;
         this.clone.y += this.diff.y;
         this.clone.element.style.transform =
-            'translate3d(' + this.clone.x + 'px, ' + this.clone.y + 'px, 0)';
+            'translate3d(' + 0 + 'px, ' + this.clone.y + 'px, 0)';
         for (let i = 0; i < this.rectList.length; i++) {
           // 碰撞检测
           if (
